@@ -1,0 +1,37 @@
+[6:00 pm, 12/10/2021] Rasheed Testya Yantra: Commands:
+  1.To Show Database Present in system--->"show databases;".
+  2.To create Database                --->"create database database_name;".
+  3.To Establish connection to database-->"use databasename;".
+  4.To show tables present in database--->"show tables;".
+  5.To create table                   --->"create table table_name (
+                                           col1 datatype constrains,
+                                           col2 datatype constrain,
+                                           col3 datatype constarin
+                                           );".
+  6.To get Structure of table         --->"describe table_name;".
+                                                (OR)
+                                           "desc table_name;".
+  7.To add data to the table          --->"insert into table_name(col1,col2,col3,.......)
+                                           value(enter row1 full details),(enter row2 full details),.......;".(when we dont no the column order).
+                                                       (OR)
+                                          "insert into table_name
+                                           value(enter row1 full details),(enter row2 full details),.......;".
+  8.To get Table with complete data   --->"select *
+                                           from table_name;".
+  9.DATA DEFINITION LANGUAGE:
+      --->Alter:
+            1.To add column   ---->"alter table table_name
+                                    add column_name datatype;".
+            2.To delete column---->"alter table table_name
+                                    drop column column_name;".
+            3.To change datatype-->"alter table table_name
+                                    modify column_name datatype;".
+            4.To rename a column-->"alter table table_name
+                                    change oldcolumn newcolumn datatype;".
+      --->Rename:
+            1.To rename a table--->"rename table oldtable_name to new table_name;".
+      --->truncate:
+            1.To remove all rows-->"truncate table table_name;".
+      --->Drop:
+            1.To drop the table--->"drop table table_name;".
+            2.To drop the database--->"drop database database_name;".
