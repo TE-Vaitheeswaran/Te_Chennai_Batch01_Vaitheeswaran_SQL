@@ -1,0 +1,120 @@
+1.WAQTD name and gender from table?
+
+Sol: select name,gender from interns;
++---------+--------+
+| name    | gender |
++---------+--------+
+| Mayur   | M      |
+| Kishore | M      |
+| Vivek   | M      |
+| Naveen  | M      |
+| Rasheed | M      |
++---------+--------+
+5 rows in set (0.00 sec)
+
+2.WAQTD mobile number of all Employees?
+
+Sol: select mobile from interns;
++------------+
+| mobile     |
++------------+
+| 7005244728 |
+| 7005246528 |
+| 7006746528 |
+| 7034566528 |
+| 7355246528 |
++------------+
+
+3.WAQTD Id and Role of all employee?
+
+Sol:select id,role from interns;
++-----+--------------------+
+| id  | role               |
++-----+--------------------+
+| 101 | PM                 |
+| 145 | Architecture       |
+| 155 | BA                 |
+| 159 | Developer          |
+| 522 | fullStackDeveloper |
++-----+--------------------+
+
+4.WAQTD Of All the employees who are born after 1995?
+
+Sol: select *
+     from interns
+     where dob>1995;
++---------+-----+------------+--------+--------------------+------------+---------+
+| name    | id  | dob        | gender | role               | mobile     | salary  |
++---------+-----+------------+--------+--------------------+------------+---------+
+| Mayur   | 101 | 1994-11-18 | M      | PM                 | 7005244728 | 27000.5 |
+| Kishore | 145 | 1996-11-08 | M      | Architecture       | 7006746528 | 10000.5 |
+| Vivek   | 155 | 1999-03-18 | M      | BA                 | 7034566528 | 15000.5 |
+| Naveen  | 159 | 1997-11-15 | M      | Developer          | 7355246528 | 55000.5 |
+| Rasheed | 522 | 1998-11-18 | M      | fullStackDeveloper | 7005246528 | 25000.5 |
++---------+-----+------------+--------+--------------------+------------+---------+
+
+5.WAQTD  Of All the employees who are born before 1995?
+
+Sol:select *
+    from interns
+    where dob<1995;
+Empty set, 1 warning (0.11 sec)
+
+6.WAQTD  Of All the employees who's salary 10000 between 30000?
+
+Sol:select *
+    from interns
+    where salary>10000 and salary<30000;
++---------+-----+------------+--------+--------------------+------------+---------+
+| name    | id  | dob        | gender | role               | mobile     | salary  |
++---------+-----+------------+--------+--------------------+------------+---------+
+| Mayur   | 101 | 1994-11-18 | M      | PM                 | 7005244728 | 27000.5 |
+| Kishore | 145 | 1996-11-08 | M      | Architecture       | 7006746528 | 10000.5 |
+| Vivek   | 155 | 1999-03-18 | M      | BA                 | 7034566528 | 15000.5 |
+| Rasheed | 522 | 1998-11-18 | M      | fullStackDeveloper | 7005246528 | 25000.5 |
++---------+-----+------------+--------+--------------------+------------+---------+
+
+7.WAQTD who's id  101,522 ?
+Sol:select *
+    from interns
+    where id=101 or id=522;
++---------+-----+------------+--------+--------------------+------------+---------+
+| name    | id  | dob        | gender | role               | mobile     | salary  |
++---------+-----+------------+--------+--------------------+------------+---------+
+| Mayur   | 101 | 1994-11-18 | M      | PM                 | 7005244728 | 27000.5 |
+| Rasheed | 522 | 1998-11-18 | M      | fullStackDeveloper | 7005246528 | 25000.5 |
++---------+-----+------------+--------+--------------------+------------+---------+
+
+8.WAQTD who's role is Architecture and PM?
+Sol:select *
+    from interns
+    where role='Architecture' or role='PM';
++---------+-----+------------+--------+--------------+------------+---------+
+| name    | id  | dob        | gender | role         | mobile     | salary  |
++---------+-----+------------+--------+--------------+------------+---------+
+| Mayur   | 101 | 1994-11-18 | M      | PM           | 7005244728 | 27000.5 |
+| Kishore | 145 | 1996-11-08 | M      | Architecture | 7006746528 | 10000.5 |
++---------+-----+------------+--------+--------------+------------+---------+
+
+9.WAQTD who's phone number is even?
+Sol:select *
+    from interns
+    where mobile % 2=0;
++---------+-----+------------+--------+--------------------+------------+---------+
+| name    | id  | dob        | gender | role               | mobile     | salary  |
++---------+-----+------------+--------+--------------------+------------+---------+
+| Mayur   | 101 | 1994-11-18 | M      | PM                 | 7005244728 | 27000.5 |
+| Kishore | 145 | 1996-11-08 | M      | Architecture       | 7006746528 | 10000.5 |
+| Vivek   | 155 | 1999-03-18 | M      | BA                 | 7034566528 | 15000.5 |
+| Naveen  | 159 | 1997-11-15 | M      | Developer          | 7355246528 | 55000.5 |
+| Rasheed | 522 | 1998-11-18 | M      | fullStackDeveloper | 7005246528 | 25000.5 |
++---------+-----+------------+--------+--------------------+------------+---------+
+
+10.WAQTD avg salary?
+Sol:select avg(salary)
+    from interns;
++-------------+
+| avg(salary) |
++-------------+
+|     26400.5 |
++-------------+
